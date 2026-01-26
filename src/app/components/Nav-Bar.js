@@ -1,41 +1,63 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="flex justify-between items-center mb-20">
-      <div className="flex items-center gap-2">
-        <Image
-          src="/logo.svg"
-          alt="Logo"
-          width={120}
-          height={30}
-          className="brightness-0 saturate-100 invert sepia hue-rotate-[10deg] saturate-[5]"
-          style={{
-            filter:
-              "brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(2476%) hue-rotate(1deg) brightness(102%) contrast(101%)",
-          }}
-        />
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/80 backdrop-blur-lg border-b border-zinc-800/50 shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={120}
+            height={30}
+            className="brightness-0 saturate-100 invert sepia hue-rotate-[10deg] saturate-[5]"
+            style={{
+              filter:
+                "brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(2476%) hue-rotate(1deg) brightness(102%) contrast(101%)",
+            }}
+          />
+        </div>
+        <nav className="hidden md:flex gap-8 text-base font-medium">
+          <a
+            href="#work"
+            className="text-zinc-400 hover:text-orange-400 transition-colors"
+          >
+            Work
+          </a>
+          <a
+            href="#about"
+            className="text-zinc-400 hover:text-orange-400 transition-colors"
+          >
+            About
+          </a>
+          <a
+            href="#contact"
+            className="text-zinc-400 hover:text-orange-400 transition-colors"
+          >
+            Contact
+          </a>
+        </nav>
       </div>
-      <nav className="hidden md:flex gap-8 text-base font-medium">
-        <a
-          href="#work"
-          className="text-zinc-400 hover:text-orange-400 transition-colors"
-        >
-          Work
-        </a>
-        <a
-          href="#about"
-          className="text-zinc-400 hover:text-orange-400 transition-colors"
-        >
-          About
-        </a>
-        <a
-          href="#contact"
-          className="text-zinc-400 hover:text-orange-400 transition-colors"
-        >
-          Contact
-        </a>
-      </nav>
     </header>
   );
 }
