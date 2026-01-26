@@ -8,9 +8,12 @@ const anekLatin = Anek_Latin({
 });
 
 export const metadata = {
-  title: "Portfolio | Your Name",
+  title: "Lam Thai - Web Developer",
   description:
-    "Creative developer & designer crafting exceptional digital experiences",
+    "Create web applications with clean and scalable code. Full-stack web developer specializing in intuitive front-end experiences and robust back-end systems.",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
