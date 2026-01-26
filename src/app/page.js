@@ -27,22 +27,22 @@ export default function Home() {
               }}
             />
           </div>
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <nav className="hidden md:flex gap-8 text-base font-medium">
             <a
               href="#work"
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-orange-400 transition-colors"
             >
               Work
             </a>
             <a
               href="#about"
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-orange-400 transition-colors"
             >
               About
             </a>
             <a
               href="#contact"
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="text-zinc-400 hover:text-orange-400 transition-colors"
             >
               Contact
             </a>
