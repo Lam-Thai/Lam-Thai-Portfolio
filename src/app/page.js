@@ -124,35 +124,6 @@ export default function Home() {
                 />
               </div>
             </div>
-
-            {/* Floating cards */}
-            <div className="absolute -left-8 top-1/4 bg-zinc-900/90 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 shadow-2xl animate-float">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">✓</span>
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-white">
-                    Project Completed
-                  </div>
-                  <div className="text-xs text-zinc-400">2 hours ago</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute -right-8 bottom-1/4 bg-zinc-900/90 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 shadow-2xl animate-float-delayed">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-white">
-                    Fast Performance
-                  </div>
-                  <div className="text-xs text-zinc-400">99/100 Score</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
