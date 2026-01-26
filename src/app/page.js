@@ -2,62 +2,203 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="relative min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black overflow-hidden">
+      {/* Animated background grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
+
+      {/* Glowing orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+      <main className="relative z-10 max-w-7xl mx-auto px-6 py-20 min-h-screen flex flex-col">
+        {/* Header/Navigation */}
+        <header className="flex justify-between items-center mb-20">
+          <div className="flex items-center gap-2">
+            {/* Replace the src below with your own logo */}
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/logo.svg"
+              alt="Logo"
+              width={120}
+              height={30}
+              className="brightness-0 saturate-100 invert sepia hue-rotate-[10deg] saturate-[5]"
+              style={{
+                filter:
+                  "brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(2476%) hue-rotate(1deg) brightness(102%) contrast(101%)",
+              }}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          <nav className="hidden md:flex gap-8 text-sm font-medium">
+            <a
+              href="#work"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Work
+            </a>
+            <a
+              href="#about"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="#contact"
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              Contact
+            </a>
+          </nav>
+        </header>
+
+        {/* Hero Section */}
+        <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left Content */}
+          <div className="flex-1 space-y-8">
+            <div className="inline-block">
+              <span className="px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium backdrop-blur-sm">
+                Available for work
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+              Tuoc Lam Thai{" "}
+              <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent whitespace-nowrap">
+                Web Developer
+              </span>
+            </h1>
+
+            <p className="text-xl text-zinc-400 max-w-xl leading-relaxed">
+              I’m a full-stack web developer who builds clean, scalable web
+              applications from intuitive front-end experiences to robust
+              back-end systems.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a
+                href="#contact"
+                className="group relative px-8 py-4 bg-white text-black rounded-lg font-medium overflow-hidden transition-all hover:scale-105"
+              >
+                <span className="relative z-10">Get in touch</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+              <a
+                href="#work"
+                className="px-8 py-4 border border-zinc-700 text-white rounded-lg font-medium hover:bg-zinc-800 transition-all hover:scale-105"
+              >
+                View my work
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="flex gap-12 pt-8 border-t border-zinc-800">
+              <div>
+                <div className="text-3xl font-bold text-white">2+</div>
+                <div className="text-sm text-zinc-500">Years Experience</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white">20+</div>
+                <div className="text-sm text-zinc-500">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white">96%</div>
+                <div className="text-sm text-zinc-500">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Profile Image */}
+          <div className="relative flex-1 max-w-lg">
+            <div className="relative">
+              {/* Glowing border effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl blur-xl opacity-75 animate-pulse"></div>
+
+              {/* Replace the src below with your own profile image */}
+              <div className="relative bg-zinc-900 rounded-2xl p-2 border border-zinc-800">
+                <Image
+                  src="/next.svg"
+                  alt="Profile"
+                  width={500}
+                  height={600}
+                  className="rounded-xl w-full h-auto invert"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Floating cards */}
+            <div className="absolute -left-8 top-1/4 bg-zinc-900/90 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 shadow-2xl animate-float">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">✓</span>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    Project Completed
+                  </div>
+                  <div className="text-xs text-zinc-400">2 hours ago</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute -right-8 bottom-1/4 bg-zinc-900/90 backdrop-blur-sm border border-zinc-800 rounded-lg p-4 shadow-2xl animate-float-delayed">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    Fast Performance
+                  </div>
+                  <div className="text-xs text-zinc-400">99/100 Score</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tech Stack */}
+        <div className="mt-20 pt-12 border-t border-zinc-800">
+          <p className="text-sm text-zinc-500 mb-6 uppercase tracking-wider">
+            Tech Stack
+          </p>
+          <div className="flex flex-wrap gap-6 items-center">
+            {[
+              "JavaScript",
+              "TypeScript",
+              "HTML/CSS",
+              "React.js",
+              "Next.js",
+              "Node.js",
+              "Express.js",
+              "Bun.js",
+              "Hono",
+              "Vite",
+              "Passport.js",
+              "Prisma",
+              "Drizzle",
+              "MySQL",
+              "PostgreSQL",
+              "Neon",
+              "C#",
+              ".NET",
+              "PHP",
+              "Git",
+              "Copilot",
+              "Claude",
+              "ChatGPT",
+              "Cursor",
+              "Grok",
+              "WatsonX",
+              "Gemini",
+            ].map((tech) => (
+              <div
+                key={tech}
+                className="px-4 py-2 bg-zinc-900/50 border border-zinc-800 rounded-lg text-zinc-300 text-sm font-medium hover:border-zinc-700 transition-colors"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
