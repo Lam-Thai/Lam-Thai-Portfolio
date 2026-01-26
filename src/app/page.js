@@ -113,13 +113,13 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl blur-xl opacity-75 animate-pulse"></div>
 
               {/* Replace the src below with your own profile image */}
-              <div className="relative bg-zinc-900 rounded-2xl p-2 border border-zinc-800">
+              <div className="relative bg-zinc-900 rounded-2xl p-4 border border-zinc-800">
                 <Image
-                  src="/next.svg"
+                  src="/profile-pic.jpg"
                   alt="Profile"
                   width={500}
-                  height={600}
-                  className="rounded-xl w-full h-auto invert"
+                  height={700}
+                  className="rounded-xl w-full h-auto"
                   priority
                 />
               </div>
