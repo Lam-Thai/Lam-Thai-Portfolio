@@ -50,9 +50,10 @@ export default function Home() {
               </a>
               <a
                 href="#work"
-                className="px-8 py-4 border border-zinc-700 text-white rounded-lg font-medium hover:bg-zinc-800 transition-all hover:scale-105"
+                className="group relative px-8 py-4 border border-zinc-700 text-white rounded-lg font-medium overflow-hidden transition-all hover:scale-105"
               >
-                View my work
+                <span className="relative z-10">View my work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </a>
             </div>
 
