@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NavBar from "./components/Nav-Bar";
+import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl text-zinc-400 max-w-xl leading-relaxed">
-              I’m a full-stack web developer who builds clean, scalable web
+              I&apos;m a full-stack web developer who builds clean, scalable web
               applications from intuitive front-end experiences to robust
               back-end systems.
             </p>
@@ -72,24 +73,35 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
+          {/* Right Content - Profile Image with 3D Effect */}
           <div className="relative flex-1 max-w-lg">
-            <div className="relative">
-              {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl blur-xl opacity-75 animate-pulse"></div>
+            <CardContainer containerClassName="py-0">
+              <CardBody className="relative group/card w-auto h-auto">
+                {/* Static gradient background behind card */}
+                <div className="absolute -inset-8 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl opacity-20 blur-2xl"></div>
 
-              {/* Replace the src below with your own profile image */}
-              <div className="relative bg-zinc-900 rounded-2xl p-4 border border-zinc-800">
-                <Image
-                  src="/profile-pic.jpg"
-                  alt="Profile"
-                  width={500}
-                  height={700}
-                  className="rounded-xl w-full h-auto"
-                  priority
+                {/* Glowing border effect */}
+                <CardItem
+                  translateZ="50"
+                  className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl blur-xl opacity-75"
                 />
-              </div>
-            </div>
+
+                {/* Profile Image */}
+                <CardItem
+                  translateZ="100"
+                  className="relative bg-zinc-900 rounded-2xl p-4 border border-zinc-800"
+                >
+                  <Image
+                    src="/profile-pic.jpg"
+                    alt="Profile"
+                    width={500}
+                    height={700}
+                    className="rounded-xl w-full h-auto"
+                    priority
+                  />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
 
