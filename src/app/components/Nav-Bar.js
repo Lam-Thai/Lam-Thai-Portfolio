@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
@@ -24,7 +25,10 @@ export default function NavBar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+        >
           <Image
             src="/logo.svg"
             alt="Logo"
@@ -36,7 +40,7 @@ export default function NavBar() {
                 "brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(2476%) hue-rotate(1deg) brightness(102%) contrast(101%)",
             }}
           />
-        </div>
+        </Link>
         <nav className="hidden md:flex gap-8 text-base font-medium">
           <a
             href="#work"
