@@ -42,7 +42,7 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="group relative px-8 py-4 bg-white text-black rounded-lg font-medium overflow-hidden transition-all hover:scale-105"
               >
                 <span className="relative z-10">Get in touch</span>

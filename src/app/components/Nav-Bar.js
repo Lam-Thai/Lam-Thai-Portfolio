@@ -51,7 +51,7 @@ export default function NavBar() {
             About
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="text-zinc-400 hover:text-orange-400 transition-colors"
           >
             Contact
