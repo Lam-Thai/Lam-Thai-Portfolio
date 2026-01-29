@@ -125,7 +125,7 @@ export default function Home() {
                 <div className="text-sm text-zinc-500">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white">20+</div>
+                <div className="text-3xl font-bold text-white">10+</div>
                 <div className="text-sm text-zinc-500">Projects Completed</div>
               </div>
               <div>
