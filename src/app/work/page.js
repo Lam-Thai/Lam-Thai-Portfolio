@@ -2,11 +2,13 @@
 
 import NavBar from "../components/Nav-Bar";
 import Image from "next/image";
+import Link from "next/link";
 import { CardContainer, CardBody, CardItem } from "../components/ui/3d-card";
 
 export default function Work() {
   const projects = [
     {
+      id: "ecommerce-platform",
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce platform with product management, shopping cart, and secure payment integration using Stripe.",
@@ -16,6 +18,7 @@ export default function Work() {
       liveUrl: "#",
     },
     {
+      id: "task-management",
       title: "Task Management App",
       description:
         "A collaborative task management application with real-time updates, user authentication, and team collaboration features.",
@@ -25,6 +28,7 @@ export default function Work() {
       liveUrl: "#",
     },
     {
+      id: "weather-dashboard",
       title: "Weather Dashboard",
       description:
         "A responsive weather dashboard that displays current weather and forecasts using external APIs with beautiful data visualization.",
@@ -34,6 +38,7 @@ export default function Work() {
       liveUrl: "#",
     },
     {
+      id: "social-media",
       title: "Social Media Platform",
       description:
         "A social networking platform with user profiles, posts, comments, likes, and real-time notifications.",
@@ -43,6 +48,7 @@ export default function Work() {
       liveUrl: "#",
     },
     {
+      id: "portfolio-cms",
       title: "Portfolio CMS",
       description:
         "A content management system for portfolio websites with drag-and-drop functionality and dynamic content editing.",
@@ -52,6 +58,7 @@ export default function Work() {
       liveUrl: "#",
     },
     {
+      id: "restaurant-booking",
       title: "Restaurant Booking System",
       description:
         "An online reservation system for restaurants with table management, booking confirmation, and customer notifications.",
@@ -93,37 +100,39 @@ export default function Work() {
           {projects.map((project, index) => (
             <CardContainer key={index} containerClassName="py-8">
               <CardBody className="bg-zinc-900/50 relative group/card border border-zinc-800 w-full h-auto rounded-xl p-6 hover:border-orange-500/50 transition-all">
-                {/* Project Image */}
-                <CardItem
-                  translateZ="50"
-                  className="w-full mb-4 overflow-hidden rounded-lg"
-                >
-                  <div className="relative w-full h-48 bg-zinc-800">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover/card:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                </CardItem>
+                <Link href={`/work/${project.id}`}>
+                  {/* Project Image */}
+                  <CardItem
+                    translateZ="50"
+                    className="w-full mb-4 overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <div className="relative w-full h-48 bg-zinc-800">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover/card:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </CardItem>
 
-                {/* Project Title */}
-                <CardItem
-                  translateZ="60"
-                  className="text-xl font-bold text-white mb-2"
-                >
-                  {project.title}
-                </CardItem>
+                  {/* Project Title */}
+                  <CardItem
+                    translateZ="60"
+                    className="text-xl font-bold text-white mb-2 cursor-pointer hover:text-orange-400 transition-colors"
+                  >
+                    {project.title}
+                  </CardItem>
 
-                {/* Project Description */}
-                <CardItem
-                  as="p"
-                  translateZ="40"
-                  className="text-zinc-400 text-sm mb-4 line-clamp-3"
-                >
-                  {project.description}
-                </CardItem>
+                  {/* Project Description */}
+                  <CardItem
+                    as="p"
+                    translateZ="40"
+                    className="text-zinc-400 text-sm mb-4 line-clamp-3"
+                  >
+                    {project.description}
+                  </CardItem>
+                </Link>
 
                 {/* Technologies */}
                 <CardItem translateZ="30" className="mb-4">
@@ -148,6 +157,7 @@ export default function Work() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 px-4 py-2 bg-zinc-800 border border-zinc-700 text-white rounded-lg text-sm font-medium hover:bg-zinc-700 hover:border-orange-500/50 transition-all text-center"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <div className="flex items-center justify-center gap-2">
                       <svg
@@ -172,6 +182,7 @@ export default function Work() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-lg text-sm font-medium hover:from-orange-600 hover:to-amber-600 transition-all text-center"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <div className="flex items-center justify-center gap-2">
                       <svg
