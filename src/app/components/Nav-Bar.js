@@ -48,18 +48,18 @@ export default function NavBar() {
           >
             Work
           </a>
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="text-zinc-400 hover:text-orange-400 transition-colors"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="text-zinc-400 hover:text-orange-400 transition-colors"
           >
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
