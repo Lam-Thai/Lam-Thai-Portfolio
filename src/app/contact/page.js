@@ -13,6 +13,7 @@ export default function Contact() {
   const [status, setStatus] = useState({ type: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copyStatus, setCopyStatus] = useState(false);
+  const [remainingAttempts, setRemainingAttempts] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -53,6 +54,12 @@ export default function Contact() {
           message: "Message sent successfully! I'll get back to you soon.",
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setRemainingAttempts(data.remainingAttempts);
+      } else if (response.status === 429) {
+        setStatus({
+          type: "error",
+          message: data.error || "Rate limit exceeded. Please try again later.",
+        });
       } else {
         setStatus({
           type: "error",
@@ -92,6 +99,13 @@ export default function Contact() {
             Have a project in mind or just want to chat? Fill out the form below
             and I&apos;ll get back to you as soon as possible.
           </p>
+          {remainingAttempts !== null && (
+            <p className="text-sm text-zinc-500 mt-2">
+              {remainingAttempts > 0
+                ? `You have ${remainingAttempts} message${remainingAttempts !== 1 ? "s" : ""} remaining today.`
+                : "You've used all your messages for today."}
+            </p>
+          )}
         </div>
 
         <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 backdrop-blur-sm">
