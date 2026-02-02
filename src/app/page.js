@@ -1,6 +1,7 @@
 import Image from "next/image";
 import NavBar from "./components/Nav-Bar";
 import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -48,13 +49,13 @@ export default function Home() {
                 <span className="relative z-10">Get in touch</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </a>
-              <a
-                href="#work"
+              <Link
+                href="/work"
                 className="group relative px-8 py-4 border border-zinc-700 text-white rounded-lg font-medium overflow-hidden transition-all hover:scale-105"
               >
                 <span className="relative z-10">View my work</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </a>
+              </Link>
             </div>
 
             {/* Social Links */}

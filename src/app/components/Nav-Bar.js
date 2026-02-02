@@ -42,12 +42,12 @@ export default function NavBar() {
           />
         </Link>
         <nav className="hidden md:flex gap-8 text-base font-medium">
-          <a
-            href="#work"
+          <Link
+            href="/work"
             className="text-zinc-400 hover:text-orange-400 transition-colors"
           >
             Work
-          </a>
+          </Link>
           <Link
             href="/about"
             className="text-zinc-400 hover:text-orange-400 transition-colors"
