@@ -320,12 +320,14 @@ export default function ProjectDetail() {
         </div>
 
         {/* Project Image */}
-        <div className="relative w-full h-96 mb-12 rounded-2xl overflow-hidden border border-zinc-800">
+        <div className="relative w-full h-96 mb-12 rounded-2xl overflow-hidden border border-zinc-800 flex items-center justify-center bg-zinc-900">
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover"
+            className={
+              projectId === "insurflow" ? "object-contain p-12" : "object-cover"
+            }
             priority
           />
         </div>

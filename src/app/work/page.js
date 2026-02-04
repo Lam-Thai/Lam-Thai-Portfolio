@@ -148,12 +148,12 @@ export default function Work() {
                     translateZ="50"
                     className="w-full mb-4 overflow-hidden rounded-lg cursor-pointer"
                   >
-                    <div className="relative w-full h-48 bg-zinc-800">
+                    <div className="relative w-full h-48 bg-zinc-800 flex items-center justify-center">
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover group-hover/card:scale-110 transition-transform duration-300"
+                        className={`${project.id === "insurflow" ? "object-contain p-8" : "object-cover"} group-hover/card:scale-110 transition-transform duration-300`}
                       />
                     </div>
                   </CardItem>
