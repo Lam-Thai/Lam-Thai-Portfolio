@@ -12,7 +12,7 @@ export default function ProjectDetail() {
   // Project data (same as in work page)
   const projects = {
     tandem: {
-      title: "Tandem - Nanny Sharing Platform",
+      title: "Tandem",
       description:
         "Full-stack web being built in production-ready, AI-assisted platforms with Next.js, TypeScript, PostgreSQL, and serverless cloud deployments.",
       fullDescription:

@@ -9,7 +9,7 @@ export default function Work() {
   const projects = [
     {
       id: "tandem",
-      title: "Tandem - Nanny Sharing Platform",
+      title: "Tandem",
       description:
         "Full-stack web being built in production-ready, AI-assisted platforms with Next.js, TypeScript, PostgreSQL, and serverless cloud deployments.",
       image: "/tandem.svg",
