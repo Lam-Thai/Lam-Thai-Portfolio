@@ -137,7 +137,7 @@ export default function ProjectDetail() {
         "Vercel",
       ],
       githubUrl: "https://github.com/Vero-Ventures",
-      liveUrl: "#",
+      liveUrl: "https://insurflow.ynvtlmr.workers.dev/",
       features: [
         "Financial Needs Analysis Engines",
         "Interactive Financial Dashboards",
