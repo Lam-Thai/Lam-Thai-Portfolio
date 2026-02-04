@@ -105,24 +105,37 @@ export default function Work() {
       liveUrl: "https://insurflow.ynvtlmr.workers.dev/",
     },
     {
-      id: "social-media",
-      title: "Social Media Platform",
+      id: "releaf",
+      title: "ReLeaf",
       description:
-        "A social networking platform with user profiles, posts, comments, likes, and real-time notifications.",
-      image: "/project4.jpg",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth.js"],
-      githubUrl: "https://github.com/Lam-Thai",
-      liveUrl: "#",
+        "Releaf is a sustainability-focused app that lets users report wildlife emergencies in real time, join environmental activities, donate to trusted charities, and support causes by purchasing eco-friendly products.",
+      image: "/releaf.jpg",
+      technologies: [
+        "Next.js",
+        "React",
+        "JavaScript",
+        "Render",
+        "Tailwind CSS",
+      ],
+      githubUrl: "https://github.com/Lam-Thai/environmental-app",
+      liveUrl: "https://environmental-app-qbbb.onrender.com/login",
     },
     {
-      id: "portfolio-cms",
-      title: "Portfolio CMS",
+      id: "bandit-breakout",
+      title: "Bandit Breakout",
       description:
-        "A content management system for portfolio websites with drag-and-drop functionality and dynamic content editing.",
-      image: "/project5.jpg",
-      technologies: ["React", "Node.js", "MySQL", "Express.js"],
-      githubUrl: "https://github.com/Lam-Thai",
-      liveUrl: "#",
+        "A turn-based cartoon animal web game with a cowboy vibe, featuring dice-based board movement, dynamic events, and player-vs-player or boss battles, built with TypeScript, JavaScript, Phaser, MongoDB, Mongoose, and Socket.io.",
+      image: "/bandit-breakout.svg",
+      technologies: [
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "Phaser",
+        "MongoDB",
+        "Socket.io",
+      ],
+      githubUrl: "https://github.com/BB-CommandZ/BanditBreakout",
+      liveUrl: "https://github.com/BB-CommandZ/BanditBreakout",
     },
     {
       id: "restaurant-booking",
@@ -168,7 +181,7 @@ export default function Work() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <CardContainer key={index} containerClassName="py-8">
-              <CardBody className="bg-zinc-900/50 relative group/card border border-zinc-800 w-full h-full rounded-xl p-6 hover:border-orange-500/50 transition-all flex flex-col">
+              <CardBody className="bg-zinc-900/50 relative group/card border border-zinc-800 w-full h-full rounded-xl p-6 hover:border-orange-500/50 transition-all flex flex-col min-h-[500px]">
                 <Link
                   href={`/work/${project.id}`}
                   className="flex-grow flex flex-col"

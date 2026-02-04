@@ -153,30 +153,38 @@ export default function ProjectDetail() {
       solution:
         "Rebuilt all financial engines from scratch using strict TypeScript, Drizzle ORM, and isolated unit tests, treating v1 spreadsheets as a logic spec and validating outputs with test data and edge cases before integrating them into interactive dashboards and AI-generated documents.",
     },
-    "social-media": {
-      title: "Social Media Platform",
+    releaf: {
+      title: "ReLeaf",
       description:
-        "A social networking platform with user profiles, posts, comments, likes, and real-time notifications.",
+        "Releaf is a sustainability-focused app that lets users report wildlife emergencies in real time, join environmental activities, donate to trusted charities, and support causes by purchasing eco-friendly products.",
       fullDescription:
-        "A modern social networking platform enabling users to connect and share content. Features user profiles with customization, post creation with media uploads, commenting and nested replies, like and share functionality, real-time notifications, user following system, news feed with algorithmic sorting, and direct messaging.",
-      image: "/project4.jpg",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth.js"],
-      githubUrl: "https://github.com/Lam-Thai",
-      liveUrl: "#",
+        "Releaf is a sustainability-focused web app built with Next.js, React, JavaScript, and Tailwind CSS, enabling users to report wildlife emergencies via photos, videos, or direct calls to wildlife centres. It also supports environmental group activities, charity donations, and eco-friendly product purchases, with deployment handled through Render.",
+      image: "/releaf.jpg",
+      technologies: [
+        "Next.js",
+        "React",
+        "JavaScript",
+        "Render",
+        "Tailwind CSS",
+      ],
+      githubUrl: "https://github.com/Lam-Thai/environmental-app",
+      liveUrl: "https://environmental-app-qbbb.onrender.com/login",
       features: [
-        "User profiles with customization",
-        "Post creation with media uploads",
-        "Commenting and nested replies",
-        "Like and share functionality",
-        "Real-time notifications",
-        "User following system",
-        "Algorithmic news feed",
-        "Direct messaging",
+        "Wildlife emergency reporting (photo, video, call)",
+        "Wildlife centre contact system",
+        "Environmental activity groups",
+        "Organization-hosted events",
+        "Charity donationss",
+        "Eco-friendly product marketplace",
+        "Cause-based fundraising",
+        "User accounts & profiles",
+        "Secure payment processing",
+        "Responsive design",
       ],
       challenges:
-        "Optimizing database queries for the news feed and implementing efficient real-time notifications at scale.",
+        "Ensuring wildlife emergency reports are sent quickly and reliably with media attachments.",
       solution:
-        "Used database indexing, query optimization, and implemented Redis pub/sub for real-time features with connection pooling.",
+        "Implemented optimized media uploads and real-time notifications to route reports instantly to the appropriate wildlife centres.",
     },
     "portfolio-cms": {
       title: "Portfolio CMS",
