@@ -52,7 +52,7 @@ export default function Work() {
     },
     {
       id: "insurflow",
-      title: "InsurFlow - Vero Ventures - Insurance Management System",
+      title: "InsurFlow - Vero Ventures",
       description:
         "Developed a comprehensive insurance management system with Next.js, TypeScript, and PostgreSQL, featuring user authentication, policy management, claims processing, and real-time notifications.",
       image: "/insurflow-logo.png",
@@ -111,6 +111,8 @@ export default function Work() {
     },
   ];
 
+  const MAX_VISIBLE_TECH = 6; // Maximum number of technologies to show
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black overflow-hidden">
       {/* Animated background grid */}
@@ -141,8 +143,11 @@ export default function Work() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <CardContainer key={index} containerClassName="py-8">
-              <CardBody className="bg-zinc-900/50 relative group/card border border-zinc-800 w-full h-auto rounded-xl p-6 hover:border-orange-500/50 transition-all">
-                <Link href={`/work/${project.id}`}>
+              <CardBody className="bg-zinc-900/50 relative group/card border border-zinc-800 w-full h-full rounded-xl p-6 hover:border-orange-500/50 transition-all flex flex-col">
+                <Link
+                  href={`/work/${project.id}`}
+                  className="flex-grow flex flex-col"
+                >
                   {/* Project Image */}
                   <CardItem
                     translateZ="50"
@@ -161,7 +166,7 @@ export default function Work() {
                   {/* Project Title */}
                   <CardItem
                     translateZ="60"
-                    className="text-xl font-bold text-white mb-2 cursor-pointer hover:text-orange-400 transition-colors"
+                    className="text-xl font-bold text-white mb-2 cursor-pointer hover:text-orange-400 transition-colors line-clamp-2"
                   >
                     {project.title}
                   </CardItem>
@@ -170,7 +175,7 @@ export default function Work() {
                   <CardItem
                     as="p"
                     translateZ="40"
-                    className="text-zinc-400 text-sm mb-4 line-clamp-3"
+                    className="text-zinc-400 text-sm mb-4 line-clamp-3 flex-grow"
                   >
                     {project.description}
                   </CardItem>
@@ -179,19 +184,26 @@ export default function Work() {
                 {/* Technologies */}
                 <CardItem translateZ="30" className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-orange-500/10 border border-orange-500/20 rounded text-orange-400 text-xs font-medium"
-                      >
-                        {tech}
+                    {project.technologies
+                      .slice(0, MAX_VISIBLE_TECH)
+                      .map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-2 py-1 bg-orange-500/10 border border-orange-500/20 rounded text-orange-400 text-xs font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    {project.technologies.length > MAX_VISIBLE_TECH && (
+                      <span className="px-2 py-1 bg-orange-500/10 border border-orange-500/20 rounded text-orange-400 text-xs font-medium">
+                        +{project.technologies.length - MAX_VISIBLE_TECH} more
                       </span>
-                    ))}
+                    )}
                   </div>
                 </CardItem>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3 mt-4">
+                <div className="flex gap-3 mt-auto">
                   <CardItem
                     translateZ="60"
                     as="a"

@@ -85,7 +85,7 @@ export default function ProjectDetail() {
         "Implemented type-safe APIs with Drizzle ORM and Zod validation alongside secure authentication, ensuring reliable data handling and safe CRUD operations throughout the application.",
     },
     insurflow: {
-      title: "InsurFlow - Vero Ventures - Insurance Management System",
+      title: "InsurFlow - Vero Ventures",
       description:
         "Developed a comprehensive insurance management system with Next.js, TypeScript, and PostgreSQL, featuring user authentication, policy management, claims processing, and real-time notifications.",
       fullDescription:
