@@ -219,30 +219,27 @@ export default function ProjectDetail() {
       solution:
         "Used Socket.io to synchronize turns and game state across players, ensuring consistent and responsive gameplay.",
     },
-    "restaurant-booking": {
-      title: "Restaurant Booking System",
+    "image-converter": {
+      title: "Image Converter",
       description:
-        "An online reservation system for restaurants with table management, booking confirmation, and customer notifications.",
+        "Built an image converter and filter app that allows users to upload photos, apply real-time visual effects, and export images in multiple formats through a fast, intuitive interface.",
       fullDescription:
-        "A comprehensive booking system designed for restaurants to manage reservations efficiently. Features real-time table availability, booking confirmation emails, SMS notifications, table management dashboard, customer database, waitlist management, recurring reservations, and integration with restaurant POS systems.",
-      image: "/project6.jpg",
-      technologies: ["Next.js", "Drizzle", "Neon", "Resend"],
-      githubUrl: "https://github.com/Lam-Thai",
-      liveUrl: "#",
+        "A comprehensive image converter and filter app that allows users to upload photos, apply real-time visual effects, and export images in multiple formats through a fast, intuitive interface.",
+      image: "/image-converter.avif",
+      technologies: ["JavaScript"],
+      githubUrl: "https://github.com/Lam-Thai/image-lab",
+      liveUrl: "https://github.com/Lam-Thai/image-lab",
       features: [
-        "Real-time table availability",
-        "Automated booking confirmations",
-        "SMS and email notifications",
-        "Table management dashboard",
-        "Customer database",
-        "Waitlist management",
-        "Recurring reservations",
-        "POS system integration",
+        "Image upload with instant preview",
+        "Real-time filter application (grayscale, sepia, blur, etc.)",
+        "Image format conversion (JPG, PNG, WebP)",
+        "Responsive, user-friendly interface",
+        "Error handling for unsupported files",
       ],
       challenges:
-        "Managing concurrent booking requests and preventing double-bookings while maintaining real-time availability.",
+        "Maintaining smooth performance while applying real-time image filters without causing UI lag on large image files.",
       solution:
-        "Implemented database transactions with row-level locking and optimistic concurrency control to ensure data consistency.",
+        "Implemented client-side image processing with optimized rendering and debounced filter updates to ensure responsive, real-time previews without blocking the UI.",
     },
   };
 

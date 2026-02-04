@@ -138,14 +138,14 @@ export default function Work() {
       liveUrl: "https://github.com/BB-CommandZ/BanditBreakout",
     },
     {
-      id: "restaurant-booking",
-      title: "Restaurant Booking System",
+      id: "image-converter",
+      title: "Image Converter",
       description:
-        "An online reservation system for restaurants with table management, booking confirmation, and customer notifications.",
-      image: "/project6.jpg",
-      technologies: ["Next.js", "Drizzle", "Neon", "Resend"],
-      githubUrl: "https://github.com/Lam-Thai",
-      liveUrl: "#",
+        "Built an image converter and filter app that allows users to upload photos, apply real-time visual effects, and export images in multiple formats through a fast, intuitive interface.",
+      image: "/image-converter.avif",
+      technologies: ["JavaScript"],
+      githubUrl: "https://github.com/Lam-Thai/image-lab",
+      liveUrl: "https://github.com/Lam-Thai/image-lab",
     },
   ];
 
