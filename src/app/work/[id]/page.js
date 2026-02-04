@@ -186,30 +186,38 @@ export default function ProjectDetail() {
       solution:
         "Implemented optimized media uploads and real-time notifications to route reports instantly to the appropriate wildlife centres.",
     },
-    "portfolio-cms": {
-      title: "Portfolio CMS",
+    "bandit-breakout": {
+      title: "Bandit Breakout",
       description:
-        "A content management system for portfolio websites with drag-and-drop functionality and dynamic content editing.",
+        "A turn-based cartoon animal web game with a cowboy vibe, featuring dice-based board movement, dynamic events, and player-vs-player or boss battles, built with TypeScript, JavaScript, Phaser, MongoDB, Mongoose, and Socket.io.",
       fullDescription:
-        "A user-friendly CMS built specifically for portfolio websites. Features drag-and-drop page builder, customizable templates, media library management, SEO optimization tools, custom domain support, analytics integration, responsive preview mode, and version control for content changes.",
-      image: "/project5.jpg",
-      technologies: ["React", "Node.js", "MySQL", "Express.js"],
-      githubUrl: "https://github.com/Lam-Thai",
-      liveUrl: "#",
+        "A turn-based cartoon animal web game with a bold cowboy vibe, where players roll dice to move across the board, triggering events and strategic battles. Built with TypeScript, JavaScript, Phaser, MongoDB, Mongoose, and Socket.io to deliver real-time multiplayer gameplay. Players can engage in PvP duels or team up against challenging boss battles, all while navigating dynamic events that keep the gameplay exciting and unpredictable.",
+      image: "/bandit-breakout.svg",
+      technologies: [
+        "TypeScript",
+        "JavaScript",
+        "Phaser",
+        "MongoDB",
+        "Mongoose",
+        "Socket.io",
+      ],
+      githubUrl: "https://github.com/BB-CommandZ/BanditBreakout",
+      liveUrl: "https://github.com/BB-CommandZ/BanditBreakout",
       features: [
-        "Drag-and-drop page builder",
-        "Customizable templates",
-        "Media library management",
-        "SEO optimization tools",
-        "Custom domain support",
-        "Analytics integration",
-        "Responsive preview mode",
-        "Version control for content",
+        "In-game shop for special equipment and consumables",
+        "Dice-based board movement",
+        "Boss battles with unique mechanics",
+        "Player duels (PvP)",
+        "Random map events",
+        "Quests and progression system",
+        "Reward system with in-game currency",
+        "Multiplayer matchmaking",
+        "Character selection",
       ],
       challenges:
-        "Creating a flexible drag-and-drop system that works across different screen sizes and generating clean, performant code.",
+        "Keeping turn-based gameplay smooth and fair in a real-time multiplayer environment.",
       solution:
-        "Built a component-based architecture with React DnD and implemented SSR with Next.js for optimal performance.",
+        "Used Socket.io to synchronize turns and game state across players, ensuring consistent and responsive gameplay.",
     },
     "restaurant-booking": {
       title: "Restaurant Booking System",
