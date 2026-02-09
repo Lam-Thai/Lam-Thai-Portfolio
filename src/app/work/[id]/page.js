@@ -33,6 +33,7 @@ export default function ProjectDetail() {
       githubUrl: "https://github.com/IDSP-TRADECARE/Tandem",
       liveUrl:
         "https://www.tandem-app.com/sign-in?redirect_url=https%3A%2F%2Fwww.tandem-app.com%2F",
+      blogUrl: "https://tandem-blog.vercel.app/",
       features: [
         "Flexible schedule upload (document, manual, or voice)",
         "Smart weekly calendar view",
@@ -334,6 +335,29 @@ export default function ProjectDetail() {
               </svg>
               View Code
             </a>
+            {projectId === "tandem" && project.blogUrl && (
+              <a
+                href={project.blogUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-zinc-800 border border-zinc-700 text-white rounded-lg font-medium hover:bg-zinc-700 hover:border-orange-500/50 transition-all"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                  />
+                </svg>
+                View Blog
+              </a>
+            )}
             <a
               href={project.liveUrl}
               target="_blank"
@@ -479,6 +503,29 @@ export default function ProjectDetail() {
                   </svg>
                   View Source Code
                 </a>
+                {projectId === "tandem" && project.blogUrl && (
+                  <a
+                    href={project.blogUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                      />
+                    </svg>
+                    Read Blog
+                  </a>
+                )}
                 <a
                   href={project.liveUrl}
                   target="_blank"
