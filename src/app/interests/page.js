@@ -6,26 +6,29 @@ import {
   DraggableCardBody,
   DraggableCardContainer,
 } from "../components/ui/draggable-card";
+import { useState } from "react";
 
 export default function Interests() {
+  const [activeCard, setActiveCard] = useState(null);
+
   const interests = [
     {
-      title: "New Zealand",
+      title: "Hiking",
       image: "/interests/new-zealand.jpg",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Canada",
+      title: "Traveling",
       image: "/interests/canada.jpg",
       gradient: "from-green-500 to-emerald-500",
     },
     {
-      title: "Japan",
+      title: "Gym",
       image: "/interests/japan.jpg",
       gradient: "from-pink-500 to-rose-500",
     },
     {
-      title: "The Narrator",
+      title: "Gaming",
       image: "/interests/narrator.jpg",
       gradient: "from-purple-500 to-indigo-500",
     },
@@ -71,7 +74,12 @@ export default function Interests() {
             const middleIndex = (totalCards - 1) / 2;
             const offset = (index - middleIndex) * 20; // Horizontal offset
             const rotation = (index - middleIndex) * 8; // Rotation angle
-            const zIndex = totalCards - Math.abs(index - middleIndex); // Z-index based on distance from center
+
+            // Calculate base z-index
+            const baseZIndex = totalCards - Math.abs(index - middleIndex);
+
+            // If this card is being dragged, give it the highest z-index
+            const zIndex = activeCard === index ? 999 : baseZIndex;
 
             return (
               <div
@@ -81,9 +89,13 @@ export default function Interests() {
                   transform: `translateX(${offset}px) rotate(${rotation}deg)`,
                   zIndex: zIndex,
                 }}
+                onMouseDown={() => setActiveCard(index)}
+                onMouseUp={() => setActiveCard(null)}
+                onTouchStart={() => setActiveCard(index)}
+                onTouchEnd={() => setActiveCard(null)}
               >
                 <DraggableCardContainer>
-                  <DraggableCardBody className="group/card !p-0 overflow-hidden w-80 md:w-96">
+                  <DraggableCardBody className="group/card !p-0 overflow-hidden w-80 md:w-96 !bg-zinc-800 border border-zinc-700">
                     {/* Image with overlay */}
                     <div className="relative w-full h-96">
                       <Image
@@ -94,7 +106,7 @@ export default function Interests() {
                       />
 
                       {/* Dark gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
 
                       {/* Title overlay */}
                       <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -109,7 +121,7 @@ export default function Interests() {
                       </div>
 
                       {/* Hover effect overlay */}
-                      <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-colors duration-300"></div>
+                      <div className="absolute inset-0 bg-zinc-900/0 group-hover/card:bg-zinc-900/20 transition-colors duration-300"></div>
                     </div>
                   </DraggableCardBody>
                 </DraggableCardContainer>
