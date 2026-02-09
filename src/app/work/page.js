@@ -196,7 +196,7 @@ export default function Work() {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className={`${project.id === "insurflow" ? "object-contain p-8" : "object-cover"} group-hover/card:scale-110 transition-transform duration-300`}
+                        className={`${project.id === "insurflow" || project.id === "tandem" ? "object-contain p-8" : "object-cover"} group-hover/card:scale-110 transition-transform duration-300`}
                       />
                     </div>
                   </CardItem>

@@ -364,7 +364,9 @@ export default function ProjectDetail() {
             alt={project.title}
             fill
             className={
-              projectId === "insurflow" ? "object-contain p-12" : "object-cover"
+              projectId === "insurflow" || projectId === "tandem"
+                ? "object-contain p-12"
+                : "object-cover"
             }
             priority
           />
