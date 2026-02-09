@@ -53,6 +53,10 @@ body {
   animation: float-delayed 3s ease-in-out infinite 1.5s;
 }
 
+.perspective-1000 {
+  perspective: 1000px;
+}
+
 .delay-1000 {
   animation-delay: 1s;
 }

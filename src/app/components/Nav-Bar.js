@@ -73,6 +73,12 @@ export default function NavBar() {
               About
             </Link>
             <Link
+              href="/interests"
+              className="text-zinc-400 hover:text-orange-400 hover:scale-125 transition-all duration-300 origin-center"
+            >
+              Interests
+            </Link>
+            <Link
               href="/contact"
               className="text-zinc-400 hover:text-orange-400 hover:scale-125 transition-all duration-300 origin-center"
             >
@@ -141,6 +147,13 @@ export default function NavBar() {
             onClick={handleLinkClick}
           >
             About
+          </Link>
+          <Link
+            href="/interests"
+            className="text-zinc-400 hover:text-orange-400 py-3 px-4 rounded-lg hover:bg-zinc-800/50 transition-all text-lg font-medium"
+            onClick={handleLinkClick}
+          >
+            Interests
           </Link>
           <Link
             href="/contact"
