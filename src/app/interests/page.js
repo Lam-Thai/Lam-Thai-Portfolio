@@ -89,27 +89,30 @@ export default function Interests() {
                   transform: `translateX(${offset}px) rotate(${rotation}deg)`,
                   zIndex: zIndex,
                 }}
-                onMouseDown={() => setActiveCard(index)}
-                onMouseUp={() => setActiveCard(null)}
-                onTouchStart={() => setActiveCard(index)}
-                onTouchEnd={() => setActiveCard(null)}
               >
                 <DraggableCardContainer>
-                  <DraggableCardBody className="group/card !p-0 overflow-hidden w-80 md:w-96 !bg-zinc-800 border border-zinc-700">
+                  <DraggableCardBody
+                    className="group/card !p-0 overflow-hidden w-80 md:w-96 !bg-zinc-800 border border-zinc-700"
+                    onMouseDown={() => setActiveCard(index)}
+                    onMouseUp={() => setActiveCard(null)}
+                    onTouchStart={() => setActiveCard(index)}
+                    onTouchEnd={() => setActiveCard(null)}
+                  >
                     {/* Image with overlay */}
                     <div className="relative w-full h-96">
                       <Image
                         src={interest.image}
                         alt={interest.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover/card:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover/card:scale-110 pointer-events-none select-none"
+                        draggable={false}
                       />
 
                       {/* Dark gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent pointer-events-none"></div>
 
                       {/* Title overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
                         <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
                           {interest.title}
                         </h3>
@@ -121,7 +124,7 @@ export default function Interests() {
                       </div>
 
                       {/* Hover effect overlay */}
-                      <div className="absolute inset-0 bg-zinc-900/0 group-hover/card:bg-zinc-900/20 transition-colors duration-300"></div>
+                      <div className="absolute inset-0 bg-zinc-900/0 group-hover/card:bg-zinc-900/20 transition-colors duration-300 pointer-events-none"></div>
                     </div>
                   </DraggableCardBody>
                 </DraggableCardContainer>
