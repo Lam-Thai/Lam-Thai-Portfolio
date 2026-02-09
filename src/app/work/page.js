@@ -26,7 +26,8 @@ export default function Work() {
         "Vercel",
       ],
       githubUrl: "https://github.com/IDSP-TRADECARE/Tandem",
-      liveUrl: "https://tandem-blog.vercel.app/",
+      liveUrl:
+        "https://www.tandem-app.com/sign-in?redirect_url=https%3A%2F%2Fwww.tandem-app.com%2F",
     },
     {
       id: "expense-tracker",
