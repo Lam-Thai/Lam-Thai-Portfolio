@@ -383,6 +383,21 @@ export default function ProjectDetail() {
               </p>
             </div>
 
+            {/* Video Showcase - Only for Bandit Breakout */}
+            {projectId === "bandit-breakout" && (
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+                <h2 className="text-2xl font-bold text-white mb-4">
+                  Gameplay Preview
+                </h2>
+                <div className="relative w-full rounded-lg overflow-hidden">
+                  <video className="w-full h-auto" controls preload="metadata">
+                    <source src="/bandit-breakout.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            )}
+
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <h2 className="text-2xl font-bold text-white mb-4">
                 Key Features
