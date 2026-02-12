@@ -14,27 +14,27 @@ export default function Interests() {
   const interests = [
     {
       title: "Hiking",
-      image: "/interests/new-zealand.jpg",
+      image: "/interests/hiking.jpg",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       title: "Traveling",
-      image: "/interests/canada.jpg",
+      image: "/interests/traveling.png",
       gradient: "from-green-500 to-emerald-500",
     },
     {
       title: "Gym",
-      image: "/interests/japan.jpg",
+      image: "/interests/gym.png",
       gradient: "from-pink-500 to-rose-500",
     },
     {
       title: "Gaming",
-      image: "/interests/narrator.jpg",
+      image: "/interests/gaming.jpg",
       gradient: "from-purple-500 to-indigo-500",
     },
     {
       title: "Photography",
-      image: "/interests/photography.jpg",
+      image: "/interests/photography.png",
       gradient: "from-orange-500 to-amber-500",
     },
     {
@@ -88,11 +88,12 @@ export default function Interests() {
                 style={{
                   transform: `translateX(${offset}px) rotate(${rotation}deg)`,
                   zIndex: zIndex,
+                  pointerEvents: "auto",
                 }}
               >
                 <DraggableCardContainer>
                   <DraggableCardBody
-                    className="group/card !p-0 overflow-hidden w-80 md:w-96 !bg-zinc-800 border border-zinc-700"
+                    className="group/card !p-0 overflow-hidden w-80 md:w-96 !bg-zinc-800 border border-zinc-700 cursor-grab active:cursor-grabbing"
                     onMouseDown={() => setActiveCard(index)}
                     onMouseUp={() => setActiveCard(null)}
                     onTouchStart={() => setActiveCard(index)}
