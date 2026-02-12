@@ -61,7 +61,7 @@ export default function Interests() {
             Places and passions that inspire me
           </p>
           <p className="text-sm text-zinc-500 italic flex items-center justify-center gap-2">
-            <span className="inline-block animate-bounce">👆</span>
+            <span className="inline-block animate-bounce">👇</span>
             Drag the cards around to explore!
           </p>
         </div>
