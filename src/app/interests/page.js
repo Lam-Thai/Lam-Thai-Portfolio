@@ -13,21 +13,6 @@ export default function Interests() {
 
   const interests = [
     {
-      title: "Hiking",
-      image: "/interests/hiking.jpg",
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      title: "Traveling",
-      image: "/interests/traveling.png",
-      gradient: "from-green-500 to-emerald-500",
-    },
-    {
-      title: "Gym",
-      image: "/interests/gym.png",
-      gradient: "from-pink-500 to-rose-500",
-    },
-    {
       title: "Gaming",
       image: "/interests/gaming.jpg",
       gradient: "from-purple-500 to-indigo-500",
@@ -41,6 +26,21 @@ export default function Interests() {
       title: "Music",
       image: "/interests/music.jpg",
       gradient: "from-red-500 to-pink-500",
+    },
+    {
+      title: "Traveling",
+      image: "/interests/traveling.png",
+      gradient: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Hiking",
+      image: "/interests/hiking.jpg",
+      gradient: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: "Gym",
+      image: "/interests/gym.png",
+      gradient: "from-pink-500 to-rose-500",
     },
   ];
 
