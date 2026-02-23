@@ -103,7 +103,7 @@ export default function Work() {
         "Vercel",
       ],
       githubUrl: "https://github.com/Vero-Ventures",
-      liveUrl: "https://insurflow.ynvtlmr.workers.dev/",
+      liveUrl: "https://insurflow.biz/",
     },
     {
       id: "releaf",
