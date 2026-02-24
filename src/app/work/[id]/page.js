@@ -71,7 +71,7 @@ export default function ProjectDetail() {
         "Render",
       ],
       githubUrl: "https://github.com/Lam-Thai/Expenses-App",
-      liveUrl: "https://expenses-app-ten-orcin.vercel.app/",
+      liveUrl: "https://expenses-app-3ebn.onrender.com/",
       features: [
         "Secure user authentication",
         "Create, read, update, and delete (CRUD) expenses",
