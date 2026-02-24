@@ -170,7 +170,7 @@ export default function ProjectDetail() {
         "Tailwind CSS",
       ],
       githubUrl: "https://github.com/Lam-Thai/environmental-app",
-      liveUrl: "https://environmental-app-qbbb.onrender.com/login",
+      liveUrl: "https://environmental-app-fawn.vercel.app/login",
       features: [
         "Wildlife emergency reporting (photo, video, call)",
         "Wildlife centre contact system",

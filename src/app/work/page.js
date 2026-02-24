@@ -119,7 +119,7 @@ export default function Work() {
         "Tailwind CSS",
       ],
       githubUrl: "https://github.com/Lam-Thai/environmental-app",
-      liveUrl: "https://environmental-app-qbbb.onrender.com/login",
+      liveUrl: "https://environmental-app-fawn.vercel.app/login",
     },
     {
       id: "bandit-breakout",
